@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.app.rest_api.moedl.Journal;
+import com.app.rest_api.model.Journal;
 import com.app.rest_api.repo.JournalRepo;
 
 import lombok.RequiredArgsConstructor;
