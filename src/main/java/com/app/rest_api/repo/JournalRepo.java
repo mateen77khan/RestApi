@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.app.rest_api.model.Journal;
+import com.app.rest_api.moedl.Journal;
 
 import jakarta.transaction.Transactional;
 
