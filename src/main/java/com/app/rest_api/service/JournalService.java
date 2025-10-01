@@ -2,6 +2,7 @@ package com.app.rest_api.service;
 
 import java.util.List;
 
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.app.rest_api.moedl.Journal;
@@ -28,7 +29,14 @@ public class JournalService {
 	}
 
 	public void deleteById(Long id) {
-		journalRepo.deleteById(id);
+
+		try {
+			if(journalRepo.findById(id)!=null) {
+				journalRepo.deleteById(id);
+				}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public void updateById(Long id, Journal journal) {
